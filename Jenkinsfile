@@ -3,7 +3,7 @@ pipeline{
 	agent {label 'Master'}
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('5412eeb4-05a9-4e16-8aa1-3b6eeb7bf698')
+		DOCKERHUB_CREDENTIALS=credentials('24d59cbc-c86b-4fa0-8a07-2221aedb3e2c')
 	}
 
 	stages {
@@ -18,7 +18,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t docker19840/nodeapp_test:latest .'
+				sh 'docker build -t docker19840/dockerimage_test:latest .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push docker19840/nodeapp_test:latest'
+				sh 'docker push docker19840/dockerimage_test:latest'
 			}
 		}
 	}
