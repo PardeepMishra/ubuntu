@@ -20,7 +20,7 @@
 			steps {
 				sh 'docker build -t docker19840/dockerImg_test:latest .'
 			}
-		}
+		}aq
 
 		stage('Login') {
 
