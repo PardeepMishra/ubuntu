@@ -3,7 +3,7 @@
 	agent {label 'linux'}
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('5412eeb4-05a9-4e16-8aa1-3b6eeb7bf698')
 	}
 
 	stages {
