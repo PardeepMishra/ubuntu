@@ -8,12 +8,12 @@ pipeline{
 
 	stages {
 	    
-	    stage('gitclone') {
+	   /*  stage('gitclone') {
 
 			steps {
 				git 'https://github.com/PardeepMishra/ubuntu.git'
 			}
-		}
+		} */
 
 		stage('Build') {
 
