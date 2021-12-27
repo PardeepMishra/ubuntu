@@ -1,4 +1,4 @@
- pipeline{
+pipeline{
 
 	agent {label 'Master'}
 
@@ -18,9 +18,9 @@
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t docker19840/dockerImg_test:latest .'
+				sh 'docker build -t docker19840/nodeapp_test:latest .'
 			}
-		}aq
+		}
 
 		stage('Login') {
 
@@ -32,7 +32,7 @@
 		stage('Push') {
 
 			steps {
-				sh 'docker push docker19840/dockerImg_test:latest'
+				sh 'docker push docker19840/nodeapp_test:latest'
 			}
 		}
 	}
