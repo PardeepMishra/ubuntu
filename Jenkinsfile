@@ -3,22 +3,16 @@ pipeline{
 	agent {label 'Master'}
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('24d59cbc-c86b-4fa0-8a07-2221aedb3e2c')
+		DOCKERHUB_CREDENTIALS=credentials('f2792baf-889f-42ef-a282-bbcf349c886f')
 	}
 
 	stages {
 	    
-	   /*  stage('gitclone') {
-
-			steps {
-				git 'https://github.com/PardeepMishra/ubuntu.git'
-			}
-		} */
-
+	   
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t docker19840/dockerimage_test:latest .'
+				sh 'docker build -t docker19840/dockerimage_test2:latest .'
 			}
 		}
 
@@ -32,7 +26,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push docker19840/dockerimage_test:latest'
+				sh 'docker push docker19840/dockerimage_test2:latest'
 			}
 		}
 	}
