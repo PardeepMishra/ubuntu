@@ -7,17 +7,12 @@ pipeline{
 	}
 
 	stages {
-
-	  stage('Initialize'){
-        def dockerHome = tool 'Docker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    	}
 	    
 	   
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t docker19840/dockerimage_test:latest .'
+				sh 'docker build -t docker19840/dockerimage_test2:latest .'
 			}
 		}
 
@@ -31,7 +26,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push docker19840/dockerimage_test:latest'
+				sh 'docker push docker19840/dockerimage_test2:latest'
 			}
 		}
 	}
