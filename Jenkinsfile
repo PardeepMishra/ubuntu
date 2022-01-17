@@ -3,7 +3,7 @@ pipeline{
 	agent {label 'Master'}
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('12392ee9-2165-4285-8886-38e636096987')
+		DOCKERHUB_CREDENTIALS=credentials('docker-hub')
 	}
 
 	stages {
